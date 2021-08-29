@@ -1,0 +1,26 @@
+note left of browser:
+the user types the note in the input field,
+then press the "Save" button
+end note
+
+note over browser:
+the browser creates a new note js object
+containing the note's content and timestamp,
+adds it to the notes list and rerenders the
+notes list on the page
+end note
+
+note over browser:
+the browser sends the new note to the server
+as the body of the post request setting
+the header "content-type" to "application/json")
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over server:
+the server elaborates the request body,
+containing the note
+end note
+
+server-->browser: HTTP Status Code 201 - created
